@@ -1,0 +1,537 @@
+@charset "UTF-8";
+body  {
+	background: #666666 url(../images/bg.png) repeat;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 20px 0 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+
+
+h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1em;
+	color: #000;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 1em;
+}
+	
+img {
+	border-style: none; /*this gets rid of blue border on linked images*/
+}
+
+a {
+	text-decoration: none;
+	color: #820000;
+}
+
+* { outline: none; }
+	
+#container  {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+} 
+
+#mainContentWrapper {
+	float: left;
+	width: 958px;
+	margin-top: 20px;
+	background: #fff;
+	border: 1px solid #000;
+}
+#mainContent  {
+	background: #fff;
+	float: left;
+	width: 680px;
+	position: relative;
+	border-right: 1px solid #000;
+}
+
+
+#mainContent h1 {
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 2.5em;
+	line-height: 1em;
+}
+#mainContent h2 {
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.8em;
+	color: #000;
+	text-transform: uppercase;
+}
+#mainContent p {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	line-height: 1em;
+	color: #333;
+}
+
+/* content container without sidebar */
+
+#mainContentNoSidebar {
+	width: 920px;
+	padding: 20px;
+}
+
+#mainContentNoSidebar h1 {
+	text-align: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 2.5em;
+	line-height: 1em;
+}
+
+#mainContentNoSidebar h1 a:hover {
+	
+	border-bottom: 1px dashed #820000;
+}
+
+#mainContentNoSidebar h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.8em;
+	color: #000;
+	text-transform: uppercase;
+}
+
+#mainContentNoSidebar p {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.1em;
+	color: #333;
+}
+#mainContentNoSidebar .postContainer {
+	background: #fff url(../images/polaroidbg.jpg) repeat-x;
+	border-bottom: medium groove #333;
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	padding-right: 10px;
+}
+
+#mainContentNoSidebar .postContainer:last-child {
+	border-bottom: none;	
+}
+
+#mainContentNoSidebar .featured {
+	float: left;
+	border: 1px solid #000;
+	margin: 10px 20px 10px 10px;
+	padding: 0px;
+	position: relative;
+}
+
+
+/* ********** HEADER ********** */
+
+#header  {
+	background: #820000;
+	padding: 10px;
+	height: auto;
+	width: 940px;
+	margin: 0px;
+	position: relative;
+	-moz-box-shadow: 5px 5px 5px #333;
+	-webkit-box-shadow: 5px 5px 5px #333;
+	box-shadow: 5px 5px 5px #333;
+} 
+
+#header h1  {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+	float: left;
+	height: 145px;
+	width: 179px;
+	text-indent: -9999px;
+}
+
+#headertext p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	color: #FFF;
+	margin-left: 230px;
+}
+
+#header .mainlogo {
+	float: left;
+	height: 145px;
+	width: 179px;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	border-width: 0px;
+	border-style: none;
+}
+#header .mainlogo a {
+	border-width: 0px;
+	border-style: none;
+	text-decoration: none;
+}
+
+/* ********** MAIN NAVIGATION ********** */
+#navigation {
+	background: #820000;
+	height:50px;
+	-moz-box-shadow: 5px 5px 5px #333;
+	-webkit-box-shadow: 5px 5px 5px #333;
+	box-shadow: 5px 5px 5px #333;
+	margin-top: 20px;
+	;
+}
+
+#navigation a {
+	color: #fff;
+	padding: 15px;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+#navigation a:hover {
+	color: #3C0;
+}
+
+#navigation ul { 
+	list-style: none; 
+}
+
+#navigation ul li {
+	float: left;
+	font-size: 1em;
+	
+}
+
+#primaryNav li .current {
+	color: #3C0;
+}
+
+
+
+
+/* ********** APPLY NOW ********* */
+
+#navigation #secondaryNav li {
+	background-color: #3C0;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin-right: 10px;
+	height: 42px;
+	float: right;
+	margin-top: 4px;
+}
+
+#navigation #secondaryNav li:hover {
+	background-color: #00FF00;
+}
+
+#navigation #secondaryNav ul li {
+	font-size: 1em;
+}
+
+#navigation #secondaryNav li a {
+	color: #000;
+	display: block;
+	font-weight: 500;
+}
+
+#navigation #secondaryNav li a:hover {
+	color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+/* ********** GALLERY *********** */
+
+#gallerycontainer {
+	float: left;
+	width: 670px;
+	margin: 0px auto 30px auto;
+	padding-left: 5px;
+}
+
+.polaroid {
+	float: left;
+	height: 170px;
+	width: 210px;
+	margin: 5px;
+	position: relative;
+	border: 1px solid #999;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-box-shadow: #ccc 5px 5px 20px;
+	-webkit-box-shadow: #ccc 5px 5px 20px;
+	background: #FFF url(../images/polaroidbg.jpg) repeat-x;
+}
+
+.polaroid:hover { 
+	-moz-box-shadow: #666 5px 5px 20px; 
+	-webkit-box-shadow: #666 5px 5px 20px; 
+}
+
+.polaroid img {
+	position: absolute;
+	height: 148px;
+	width: 198px;
+	margin-left:5px;
+	margin-top:5px;	
+	border: 1px solid #333;
+}
+
+
+/* ********** SIDEBAR ********** */
+
+#sidebar  {
+	float: right; /* since this element is floated, a width must be given */
+	width: 260px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #fff;
+	position: relative;
+	margin-top: 80px;
+}
+#sidebar h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #FFF;
+	text-align: center;
+	height: 34px;
+	background: #820000;
+	padding: 10px 5px 0px;
+	position: relative;
+	-moz-box-shadow: 5px 5px 5px #666;
+	-webkit-box-shadow: 5px 5px 5px #666;
+	box-shadow: 5px 5px 5px #666;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+	word-spacing: 0.25em;
+}
+
+.ribbon {
+	height: 57px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin-right: -16px;
+}
+
+
+/* ********** SIDEBAR NAVIGATION ********** */
+
+
+#sidebarnav {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#sidebarnav li a {
+	display: block;
+	height: 60px;
+	border-bottom: 1px dashed #000;
+	margin: 5px;
+}
+
+#sidebarnav li a, #sidebarnav li a:visited {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.2em;
+	color: #333;
+	text-decoration: none;
+	list-style: none;
+	display: block;
+	height: 40px;
+	padding-top: 20px;
+	background: url(../images/bullet.png) no-repeat left center;
+	padding-left: 30px;
+}
+
+#sidebarnav li a:hover, #sidebarnav li a:active {
+	color: #820000;
+	background: url(../images/bulletcurrent.png) no-repeat left center;
+}
+
+#sidebarnav li a.current{
+	background: url(../images/bulletcurrent.png) no-repeat left center;
+	color: #820000;
+}
+
+/* ********** CLEARING ELEMENTS ********** */
+
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+
+/* ********** MAP ********** */
+#map_canvas {
+	height: 500px; 
+	width: 650px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #000;
+}
+
+
+/* ********** FOOTER ********** */
+
+#footer  { 
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	
+} 
+#footer p  {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	font-size: .7em;
+}
+.textalignright {
+	text-align: right;
+	display: block;
+	float: right;
+}
+
+
+
+/* ********** HOME PAGE ********* */
+
+.home #mainContentNoSidebar {
+	width: 960px;
+	position: relative;
+	float: left;
+	padding: 0;
+	background: url(../images/office02.jpg);
+	height: 720px;
+	border-style: none;
+}
+
+/* ********** FORM ********** */
+
+form {
+	margin: 0 auto;
+	padding: 10px;
+}
+
+
+input {
+	border: 3px double #666;
+	margin-left: 5px;
+	max-width: 210px;
+	float: left;
+}
+
+input[type="text"]:focus {
+	border-color: #0C3;	
+}
+
+input[type="radio"] {
+	border: none;	
+}
+
+select {
+	float: left;
+	margin-left: 5px;
+}
+
+label {
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.8em;
+	color: #000;
+	float: left;
+}
+
+.error {
+	color: #820000;	
+	margin-left: 10px;
+}
+
+fieldset {
+	margin: 0 0 10px 16px;
+	padding: 5px;
+	border: 1px solid #666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset p {
+	margin: 3px 0 2px;
+	padding: 5px;
+	text-align: left;
+	float: left;
+	width: 100%;
+}
+
+legend {
+	color: #fff;
+	margin: 0 0 0 -16px;
+	padding: 5px;
+	border: 1px solid #666;
+	background: #820000;
+}
+
+textarea {
+	width: 100%;
+	border: 3px double #666;
+}
+
+#comments {
+	width: 600px;
+	margin: 10px 0 10px 12px;
+}
+
+.required {
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	margin-left: 5px;
+	color: #000;
+}
+
+
+.submitbtn {
+    background-color: #3C0;
+    float: right;
+    font-size: 1em;
+    margin: 0 0 20px;
+    padding: 5px;
+	cursor: pointer;
+}
+
+.submitbtn:hover{
+    background-color: #00FF00;
+}
+#mainContent .thankyou{
+	color: #0C3;
+}
+#mainContent .warning{
+	color: #820000;
+}
+
+#mainContent .field-keys {
+	margin-left: 25px;
+	width: 635px;
+	border: 1px solid #820000;
+	padding: 5px;
+	color: #820000;
+	text-align: left;
+}

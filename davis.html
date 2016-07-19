@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>davis estates</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"><!--[if IE 5]>
+<style type="text/css"> 
+/* place css box model fixes for IE 5* in this conditional comment */
+.twoColFixRtHdr #sidebar1 { width: 220px; }
+</style>
+<![endif]--><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColFixRtHdr #sidebar1 { padding-top: 30px; }
+.twoColFixRtHdr #mainContent { zoom: 1; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'>
+</script>
+<script type='text/javascript' src='js/fancyzoom.js'>
+</script>
+<script type='text/javascript' src="js/imagerotate.js">
+</script>
+<script type='text/javascript' src="js/custom.js">
+</script>
+<script type="text/javascript">
+
+
+
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(33.972022, -81.144741);
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        var marker = new google.maps.Marker({
+      position: myLatlng,
+      title:"davis estates"
+  });
+        
+        var contentString = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '<\/div>'+
+    '<h2 id="firstHeading" class="firstHeading">davis estates<\/h2>'+
+    '<div id="bodyContent">'+
+    '<p style="font-size:1em">Davis Estates is located at 4216 Augusta Road, Lexington, South Carolina 29073.<\/p>'+
+    '<\/div>'+
+    '<\/div>';
+
+var infowindow = new google.maps.InfoWindow({
+    content: contentString
+});
+
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+});
+        
+        
+        
+        
+  
+  // To add the marker to the map, call setMap();
+  marker.setMap(map);  
+  }
+  
+  function loadScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+    document.body.appendChild(script);
+  }
+  
+  window.onload = loadScript;
+</script>
+
+<script type="text/javascript">
+	var conveythis_src = 'en';
+</script>
+<script type="text/javascript" src="http://s1.conveythis.com/e2/_v_3/javascript/e3.js"></script>
+
+<link rel="shortcut icon" href="favicon.png">
+</head>
+<body class="twoColFixRtHdr">
+<div id="container">
+<!-- Begin ConveyThis Button -->
+
+<div class="conveythis">
+	<a class="conveythis_drop" title="Translate" href="http://www.translation-services-usa.com/"><span class="conveythis_left_image">translation</span></a> 
+	<a class="conveythis_drop" title="Translate" href="http://www.conveythis.com/">Translate</a>
+	<span class="conveythis_seperator"> | </span>
+	<a class="conveythis_no_drop" title="Spanish" href="http://www.translation-services-usa.com/spanish.php" rel="es"><span class="conveythis_image_spanish">Spanish</span></a> 
+	<a class="conveythis_no_drop" title="German" href="http://www.translation-services-usa.com/german.php" rel="de"><span class="conveythis_image_german">German</span></a> 
+	<a class="conveythis_no_drop" title="Chinese" href="http://www.translation-services-usa.com/chinese.php" rel="zh-CN"><span class="conveythis_image_chinese">Chinese</span></a> 
+	<a class="conveythis_no_drop" title="Japanese" href="http://www.translation-services-usa.com/japanese.php" rel="ja"><span class="conveythis_image_japanese">Japanese</span></a>
+</div>
+
+<!-- End ConveyThis Button -->
+<div id="header">
+<h1>ARC Rentals</h1>
+<div id="headertext">
+<p>ARC Rentals has 5 communities in the Lexington-West Columbia area. They have great Lexington One Schools, are close to shopping and interstates, and have county recreational facilities nearby. Rental rates are affordable with water and sewer included. Senior citizen discounts available upon request.</p>
+<p>Office: 4220 Augusta Road Lexington, South Carolina 29073<span class="textalignright">Phone: 803.730.7155</span></p>
+</div>
+<!-- end header text -->
+<div class="mainlogo"><a href="index.html"><img src="images/ARCLogo(small).png" alt="logo"></a></div>
+<!-- end #header --></div>
+<!-- main navigation -->
+<div id="navigation">
+<ul id="primaryNav">
+<li><a href="index.html">home</a></li>
+<li><a href="communities.html">our communities</a></li>
+</ul>
+<ul id="secondaryNav">
+<li><a href="apply.php">apply now</a></li>
+</ul>
+</div>
+<!--end main navigation -->
+<div id="mainContentWrapper">
+<div id="sidebar">
+<h3>quick links<img class="ribbon" src="images/quicklinksribbon.png" alt="ribbon"></h3>
+<ul id="sidebarnav">
+<li><a href="hiddenvalley.html">hidden valley</a></li>
+<li><a href="davis.html" class="current">davis estates</a></li>
+<li><a href="hermitage.html">hermitage pond</a></li>
+<li><a href="hyler.html">hyler acres</a></li>
+<li><a href="paradise.html">paradise gardens</a></li>
+</ul>
+<!-- end #sidebar1 --></div>
+<div id="mainContent">
+<h1>Davis Estates</h1>
+<p>4216 Augusta Road, Lexington, South Carolina 29073</p>
+<div id="gallerycontainer">
+<div class="polaroid"><a href="#photo1"><img src="images/davis01_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo2"><img src="images/davis02_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo3"><img src="images/davis03_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo4"><img src="images/davis04_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo5"><img src="images/davis05_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo6"><img src="images/davis06_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo7"><img src="images/davis07_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo8"><img src="images/davis08_thumb.jpg" alt="davis"></a></div>
+<div class="polaroid"><a href="#photo9"><img src="images/davis09_thumb.jpg" alt="davis"></a></div>
+<div id="photo1"><img src="images/davis01.jpg" alt="davis"></div>
+<div id="photo2"><img src="images/davis02.jpg" alt="davis"></div>
+<div id="photo3"><img src="images/davis03.jpg" alt="davis"></div>
+<div id="photo4"><img src="images/davis04.jpg" alt="davis"></div>
+<div id="photo5"><img src="images/davis05.jpg" alt="davis"></div>
+<div id="photo6"><img src="images/davis06.jpg" alt="davis"></div>
+<div id="photo7"><img src="images/davis07.jpg" alt="davis"></div>
+<div id="photo8"><img src="images/davis08.jpg" alt="davis"></div>
+<div id="photo9"><img src="images/davis09.jpg" alt="davis"></div>
+</div>
+<!-- end gallery -->
+<h2>Map it!</h2>
+<div id="map_canvas"><!-- google map goes here --></div>
+</div>
+<!-- end #mainContent --></div>
+<!-- end mainContentWrapper -->
+<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat">
+<div id="footer">
+<p>website design by <a href="http://www.unstuffeddesign.com">unstuffed design</a><span class="textalignright">copyright © <?php ini_set('date.timezone', 'America/New_York');
+  echo date('Y');
+  ?> . all rights reserved.</span></p>
+<!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

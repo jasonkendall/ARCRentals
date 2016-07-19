@@ -1,0 +1,248 @@
+<?php
+	if (array_key_exists('send', $_POST)) {
+    	//mail procession script
+        $to = 'jason@unstuffeddesign.com'; //change email address
+        $subject = 'Pre-qualification Application';
+        
+        // process the $_POST variables
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $address = $_POST['address'];
+        $county = $_POST['county'];
+        $state = $_POST['state'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        
+        // build the message
+        $message = "First Name: $firstname\r\n\r\n";
+        $message = "Last Name: $lastname\r\n\r\n";
+        $message .= "Address: $address";
+        $message .= "County: $county";
+        $message .= "State: $state";
+        $message .= "Phone: $phone";
+        $message .= "Email: $email";
+        
+        // send it
+        $mailSent = mail($to, $subject, $message);
+     }  
+ ?>        
+        
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Apply Now</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"><!--[if IE 5]>
+<style type="text/css"> 
+/* place css box model fixes for IE 5* in this conditional comment */
+.twoColFixRtHdr #sidebar1 { width: 220px; }
+</style>
+<![endif]--><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColFixRtHdr #sidebar1 { padding-top: 30px; }
+.twoColFixRtHdr #mainContent { zoom: 1; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+<script type='text/javascript' src="js/custom.js"></script>
+<script type='text/javascript' src="js/jquery.validate.js"></script>
+
+</head>
+
+<body class="twoColFixRtHdr">
+ <div id="container">
+  <div id="header">
+    <h1>ARC Rentals</h1>
+    <div id="headertext">
+    <p>ARC Rentals has 5 communities in the Lexington-West Columbia area. They have great Lexington Schools, are close to shopping and interstates, and have county recreational facilities nearby.</p>
+    <p>Office: 4220 Augusta Road Lexington, South Carolina 29073<span class="textalignright">Phone: 803.791.4663</span></p></div>
+<!-- end header text -->
+    <div class="mainlogo"><a href="index.html"><img src="ARCLogo(small).png" alt="logo"></a></div>
+  <!-- end #header --></div>
+  
+  <!-- main navigation -->
+  	
+    
+    <div id="navigation">
+		<ul id="primaryNav">
+			<li><a href="index.html">home</a></li>
+			<li><a href="communities.html">our communities</a></li>
+		</ul>
+		<ul id="secondaryNav">
+			<li><a href="apply.html">apply now</a></li>
+		</ul>
+	</div>
+
+  
+  
+  <!--end main navigation -->
+   <div id="mainContentWrapper">
+   
+   <div id="sidebar">
+    <h3>quick links<img class="ribbon" src="images/quicklinksribbon.png" alt="ribbon"></h3>
+    <ul id ="sidebarnav">
+      <li><a href="hiddenvalley.html">hidden valley</a>
+      </li><li><a href="davis.html">davis estates</a></li>
+      <li><a href="hermitage.html">hermitage pond</a></li>
+      <li><a href="hyler.html">hyler acres</a></li>
+      <li><a href="paradise.html">paradise gardens</a></li>
+    </ul>
+    <!-- end #sidebar1 --></div>
+
+  <div id="mainContent">
+   <h1>Pre-Qualification Application</h1>
+   <p>This form is for pre-qualification only. This does not constitute an approval.</p>
+		<form action="formValidate.php" method="post" id="form">
+        <?php
+        	if ($POST && !$mailSent) {
+            ?>
+            <p>Sorry, there was a problem sending your message.</p>
+            <?php
+            } elseif ($_POST && $mailSent) {
+            ?>
+            <p>Thank You. Your application has been sent.</p>
+       <?php } ?>     
+       	  <fieldset>
+            	<legend>Personal Information</legend>
+                	
+            <p><label for="firstname">First Name:</label><input class="required" type="text" name="firstname" id="firstname" tabindex="1" title="please enter your first name" action="<?php $_echo $_SERVER['PHP_SELF']; ?>" /><span class="required">(required)</span></p>
+                    <p><label for="lastname">Last Name:</label><input class="required" type="text" name="lasttname" id="lastname" tabindex="2" title="please enter your last name" /><span class="required">(required)</span></p>
+                    <p><label for="address">Street Address:</label><input class="required" type="text" name="address" id="address" tabindex="3" title="please enter your address"/><span class="required">(required)</span></p>
+            <p><label for="county">County:</label><input class="required" type="text" name="county" id="county" tabindex="4" title="please enter your county"/><span class="required">(required)</span></p>
+            		<p><label for="state">State:</label><input class="required" type="text" name="state" id="state" tabindex="5" title="please enter your state name"/><span class="required">(required)</span></p>
+                   <p><label for="phone">Phone (with area code):</label><input class="required" type="text" name="phone" id="phone" tabindex="6" title="please enter your 10 digit telelphone number (##########)"/><span class="required">(required)</span></p>
+                    <p><label for="email">Email Address:</label><input class="required" type="text" name="email" id="email" tabindex="7" title="please enter your email address" /><span class="required">(required)</span></p>
+                    <p><label for="time">What is the best time of day to contact you?</label><input type="text" name="time" id="time" tabindex="8" /></p>    			
+          </fieldset>
+            
+          <fieldset>       
+               
+           	<legend>Employment and Income</legend>     
+       		<p><label for="employment">Are you currently employed full time?</label>
+            		<label>
+            		    <input type="radio" name="employment" value="yes" id="employment_0">
+            		    yes</label>
+            		  
+            		  <label>
+            		    <input type="radio" name="employment" value="no" id="employment_1">
+            		    no</label></p>
+            		  
+          		  	<p><label for="netincome">What is your monthly net income?</label><input type="text" name="netincome" id="netincome" tabindex="9" /></p>
+                    <p><label for="currentypay">What do you currently pay for housing per month?</label><input type="text" name="currentpay" id="currentpay" tabindex="10" /></p>
+                    
+                    <p><label for="employment">Are utilities currently included in your housing costs?</label>
+                    <label>
+            		    <input type="radio" name="utilities" value="yes" id="utilities_0">
+            		    yes</label>
+            		  
+            		  <label>
+            		    <input type="radio" name="utilities" value="no" id="utilities_1">
+            		    no</label></p>
+          
+          			<p><label for="downpayment">What is the most you can put down towards a down payment?</label><input type="text" name="downpayment" id="downpayment" tabindex="11" /></p>
+          
+          
+          			<p><label for="co-purchaser">Do you have a co-purchaser?</label>
+                    <label>
+            		    <input type="radio" name="co-purchaser" value="yes" id="co-purchaser_0">
+            		    yes</label>
+            		  
+            		  <label>
+            		    <input type="radio" name="co-purchaser" value="no" id="co-purchaser_1">
+            		    no</label></p>
+                        <p><label for "co-purchaserincome">What is the co-purchaser's net monthly take home income?</label><input type="text" name="co-purchaserincome" id="co-purchaserincome" tabindex="12" /></p>
+      </fieldset>
+      
+      <fieldset>                 
+                   <legend>Purchasing, Renting or Moving in your own home?</legend>
+                   <p><label for="interest">Are you interested in purchasing, renting or moving in your own home?</label></p>
+                    <p><label>
+            		    <input type="radio" name="interest" value="purchase" id="interest_0">
+            		    purchase</label>
+            		  
+            		  <label>
+            		    <input type="radio" name="interest" value="rent" id="interest_1">
+            		    rent</label>     
+                        
+                      <label>
+            		    <input type="radio" name="interest" value="move in" id="interest_2">
+            		    move in</label> </p> 
+                    
+                    <p><label for="finance">If purchasing, will you need financing through the community?</label>
+                    <label>
+            		    <input type="radio" name="finance" value="yes" id="finance_0">
+            		    yes</label>
+            		  
+            		  <label>
+            		    <input type="radio" name="finance" value="no" id="finance_1">
+            		    no</label>     
+                        
+                      <label>
+            		    <input type="radio" name="finance" value="NA" id="finance_2">
+            		    NA</label></p>
+                    
+                    <p><label for="bedrooms">If purchasing or renting, homw many bedrooms do you need?</label>
+                    	<select>
+                        	<option value="selected" selected="selected">please choose</option>
+                        	<option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="Any">Any</option>
+                        </select></p> 
+                        
+                    <p><label for="homesize">If moving in your own home, what is the size of the home?</label>
+                    	<select>
+                        	<option value="selected" selected="selected">please choose</option>
+                        	<option value="16x80">16x80</option>
+                            <option value="14x70">14x70</option>
+                            <option value="12x60">12x60</option>
+                            <option value="Other">Other</option>
+                      </select></p>
+                         
+                      <p><label for="website">How did you find our web site?</label>
+                    	<select>
+                        	<option value="selected" selected="selected">please choose</option>
+                        	<option value="BusinessCard">Business Card</option>
+                            <option value="Friend / Relative">Friend / Relative</option>
+                            <option value="Newspaper">Newspaper</option>
+                            <option value="Phonebook">Phonebook</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Search Engine">Search Engine</option>
+                            <option value="Drove By">Drove By</option>
+                            <option value="Other">Other</option>
+                        </select></p>
+                         
+                         <p><label for="buyingprocess">How far along are you in the buying process?</label>
+                    	<select>
+                        	<option value="selected" selected="selected">please choose</option>
+                        	<option value="Just Started">Just Started</option>
+                            <option value="Ready to Move">Ready to Move</option>
+                            <option value="Looking for the Right Home">Looking for the Right Home</option>
+                            <option value="Looking for the Best Deal">Looking for the Best Deal</option>
+                        </select></p>
+                        
+                        
+                 <p><label for="movein">When would you like to move in?:</label><input type="text" name="movein" id="movein" tabindex="12" /></p>
+          </fieldset>
+          <fieldset>
+                 <legend>Additional Comments</legend>
+                 <textarea name="comments" id="comments" rows="11" cols="30" tabindex="13"></textarea>              
+          </fieldset>
+          
+          <input name="Submit" type="submit" class="submitbtn" value="Apply Now" />
+        
+        </form>
+  </div><!-- end #mainContent -->
+ </div><!-- end mainContentWrapper -->
+	<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat">
+  <div id="footer">
+  <p>website design by <a href="http://www.unstuffeddesign.com">unstuffed design</a><span class="textalignright">copyright &copy; 2011. all rights reserved.</span></p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>
